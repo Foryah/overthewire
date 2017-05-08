@@ -1,2 +1,5 @@
-# overthewire
-Scripts needed to solve CTF wargames from overthewire.org
+# OverTheWire
+Scripts needed to solve some CTF wargames from overthewire.org
+
+Natas:
+* natas15 - brutus.py
