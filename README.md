@@ -8,4 +8,4 @@ Python version used : **2.7**
 ## Challenges 
 
 ### Natas:
-* natas15 - brutus.py
+* Natas15 -> [brutus.py](https://github.com/Foryah/overthewire/blob/master/natas/brutus.py)
