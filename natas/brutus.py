@@ -48,5 +48,4 @@ class Brutus(BruteForce):
 
 if __name__ == "__main__":
     brutus = Brutus()
-    brutus.prepare()
     brutus.crack_it()

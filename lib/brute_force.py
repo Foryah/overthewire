@@ -91,6 +91,7 @@ class BruteForce(object):
         write(check_pass(self.check_url, self.check_user, key))
 
     def crack_it(self):
+        self.prepare()
         letters = self.get_letters()
         key = self.crack_key(letters)
         self.check(key)
