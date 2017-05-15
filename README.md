@@ -1,4 +1,5 @@
-# OverTheWire
+# OverTheWire 
+[![Code Climate](https://codeclimate.com/github/Foryah/overthewire/badges/gpa.svg)](https://codeclimate.com/github/Foryah/overthewire)
 ## Description
 
 Scripts needed to solve some CTF wargames from overthewire.org.
